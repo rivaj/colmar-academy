@@ -15,15 +15,16 @@ h2 {
     font-weight: bold;
 }
 
-.main-content {
+/*.main-content {
   position: relative;
-  top: 5.3125rem; /* To offset for fixed header. */
-}
 
+}*/
+/*
 .center {
   text-align: center;
-}
+}*/
 
+/* Don't need this one anymore*/
 .button {
   border-radius: 4px;
   background-color: #4a4a4a;
@@ -32,19 +33,12 @@ h2 {
 
 .image-container {
   overflow: hidden;
-
 }
 
 .image-container img {
   display: block;
   /*margin-left: 32px;
   margin-top: 32px;width: 90%;*/
-}
-
-@media only screen and (max-width: 760px) {
-  .main-content {
-    top: 2.5625rem;
-  }
 }
 
 /* Header */
@@ -141,11 +135,11 @@ header .mobile {
 
 .start-here-text {
     margin-left: 24px;
-    width:20%;border: 1px solid red;
+    width:25%;border: 1px solid red;
 }
 
 .start-here-text h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;border: 1px solid green;
   margin-top: 10rem;
   margin-bottom: 2rem;
@@ -153,6 +147,7 @@ header .mobile {
 
 .start-here-text span {
   margin-top: 2rem;border: 1px solid green;
+  font-size: 2rem;
 }
 
 .startbutton {
@@ -160,7 +155,7 @@ header .mobile {
   padding-bottom: 8px;
   width: 90%;
   color: white;
-  font-size: 0.75rem;
+  font-size: 1.5rem;
   background-color: grey;
   text-align: center;
   margin-top: 2rem;
@@ -189,22 +184,41 @@ header .mobile {
 }
 
 /* Information section*/
-
 .on-campus {
   display: flex;
-  padding-top: 2rem;
-  padding-bottom: 2rem;border: 1px solid red;
+  padding-top: 2rem;padding-bottom: 2rem;
+  /*padding-bottom: 2rem;*/border: 2px solid red;
 }
 
 .on-campus .quote{
   border:1px solid green;
-  width: 60%;padding-left: 24px;
+  width: 60%;margin-top: 0;padding-bottom: 0;
+  padding-left: 24px;
   padding-right: 24px;
 }
 
 .on-campus .quote img{
   width: 100%;
+}
 
+.quote h1 {
+  font-size: 3rem;
+  margin-top: 32px;
+  margin-bottom: 24px;border: 1px solid orange;
+}
+
+.quote p{
+  line-height: 1.4;/*margin-bottom: 24px;*/
+  font-size: 1.6rem;
+  width:80%;color: grey;
+  font-weight: lighter;
+  margin-bottom: 24px;border: 1px solid orange;
+}
+
+.author {
+    border: 1px solid pink;
+    color: black;
+    font-size: 1.6rem;
 }
 
 .on-campus-details {
@@ -215,16 +229,44 @@ header .mobile {
 .on-campus-details .oncampusdetail {
   display: flex;
   border: 1px solid orange;
-  padding: 16px;
+  padding: 1rem;padding-right: 0;
+}
+
+/* Remove the padding at top of first item only */
+#orientation {
+  padding-top: 0;
 }
 
 .oncampusdetail img {
-  width: 35%; height:35%;
+  width: 35%; height:34%;border: 2px solid blue;
 }
 
 .on-campus-text {
+  display:flex;flex-direction: column;
+  justify-content: center;
   width: 65%;border: 1px solid red;
-  margin-left: 24px;
+  padding-left: 24px;
+}
+
+.on-campus-text h2{
+  margin-bottom: 8px;
+  line-height: 1.4;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.on-campus-text span {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  font-weight: lighter;border: 1px solid red;
+  width: 75%;
+}
+
+.on-campus-text a{
+  color: #4ba3f4;
+  font-size: 1.8rem;
+  font-weight: lighter;
 }
 
 #guest-lecturer {
@@ -353,13 +395,13 @@ header .mobile {
   display:flex;
 }
 
-.quote {
+.quote2 {
 border:1px solid blue;
 width: 60%;height:auto;
 margin-top: 32px;
 }
 
-.quote video {
+.quote2 video {
 border:1px solid green;
 margin-left: 24px;
 margin-right: 24px;
@@ -368,13 +410,21 @@ width:93%;height:auto;
 
 }
 
-.quote .quotetxt {
+.quote2 .quote2txt {
   margin-left: 24px;border: 1px solid yellow;
-  width: 80%;
+  width: 100%;padding-right: 24px;
 }
 
-.quote .quotetxt p {
-    margin-top: 8px;
+.quote2 .quote2txt h2 {
+  font-weight:500;
+  font-size: 2rem;
+}
+
+.quote2 .quote2txt p {
+    margin-top: 8px;border: 1px solid red;
+    font-size: 1.6rem;
+    width:100%;color: grey;
+    font-weight: lighter;
 }
 
 .thesis-section-addons {
@@ -403,9 +453,13 @@ width:93%;height:auto;
 .designtext h2{
     border:1px solid orange;width: 80%;
     line-height: 160%;
+    font-weight:500;
+    font-size: 2rem;
 }
 .designtext span {
-  border:1px solid orange;width: 80%;line-height: 160%;
+  border:1px solid orange;width: 75%;line-height: 160%;
+  font-size: 1.5rem;
+  font-weight:lighter;
 
 }
 
@@ -422,7 +476,7 @@ footer {
 }
 
 footer .content {
-  display: flex;
+  display: flex;border:1px solid red;
 
 }
 
@@ -430,14 +484,14 @@ footer .copyright {
   flex-grow: 1;
   margin-left: 24px;
   margin-top: 16px;
-    font-size: 1rem;
+    font-size: 1rem;border:1px solid orange;
 }
 
 footer .terms, .privacy{
   margin-left: 24px;
   margin-top: 16px;
   margin-right: 24px;
-  font-size: 1rem;
+  font-size: 1rem;border:1px solid blue;
 }
 
 @media only screen and (min-width: 760px) {
