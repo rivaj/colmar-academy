@@ -3,6 +3,7 @@
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  color: #383838;
 }
 
 h1 {
@@ -15,10 +16,11 @@ h2 {
     font-weight: bold;
 }
 
-/*.main-content {
+.main-content {
   position: relative;
+  width:100%;
 
-}*/
+}
 /*
 .center {
   text-align: center;
@@ -40,6 +42,7 @@ h2 {
   /*margin-left: 32px;
   margin-top: 32px;width: 90%;*/
 }
+
 
 /* Header */
 
@@ -135,35 +138,43 @@ header .mobile {
 
 .start-here-text {
     margin-left: 24px;
-    width:25%;border: 1px solid red;
+    width:35%;
+    border: 1px solid red;
 }
 
 .start-here-text h1 {
+  color: #383838;
   font-size: 2.5rem;
   font-weight: bold;border: 1px solid green;
+  width:80%;
   margin-top: 10rem;
   margin-bottom: 2rem;
 }
 
-.start-here-text span {
-  margin-top: 2rem;border: 1px solid green;
-  font-size: 2rem;
+.start-here-text p {
+  margin-top: 2rem;border: 1px solid yellow;
+  font-size: 1.5rem;
+  color: #383838;
+  line-height: 1.4;
+  width: 80%;
 }
 
 .startbutton {
   padding-top: 8px;
   padding-bottom: 8px;
-  width: 90%;
+  width: 70%;
   color: white;
-  font-size: 1.5rem;
-  background-color: grey;
+  font-size: 1.4rem;
+  background-color: #383838;
   text-align: center;
   margin-top: 2rem;
+  font-weight:lighter;
 }
 
 #startherelogo {
-  width: 60%;height: auto;
-  margin: 32px 24px;
+  width: 60%;height: 80%;
+  margin-left: 24px;
+  /*margin: 32px 24px;*/border: 2px solid red;
 }
 
 @media only screen and (max-width: 760px) {
@@ -178,7 +189,7 @@ header .mobile {
   .start-here-text {
       margin-left: 24px;margin-right: 24px;
       margin-bottom: 32px;
-      width:100%;border: 1px solid red;
+      width:100%;border: 2px solid red;
   }
 
 }
@@ -186,19 +197,20 @@ header .mobile {
 /* Information section*/
 .on-campus {
   display: flex;
-  padding-top: 2rem;padding-bottom: 2rem;
+  margin-top: 2rem;margin-bottom: 2rem;
   /*padding-bottom: 2rem;*/border: 2px solid red;
 }
 
 .on-campus .quote{
   border:1px solid green;
   width: 60%;margin-top: 0;padding-bottom: 0;
-  padding-left: 24px;
-  padding-right: 24px;
+  margin-left: 24px;
+  /*padding-right: 24px;*/
 }
 
 .on-campus .quote img{
-  width: 100%;
+  margin-top: 2rem;
+  width: 100%;height:auto%;
 }
 
 .quote h1 {
@@ -217,24 +229,25 @@ header .mobile {
 
 .author {
     border: 1px solid pink;
-    color: black;
     font-size: 1.6rem;
 }
 
 .on-campus-details {
-  border: 1px solid blue;
-  width: 40%;
+  border: 2px solid blue;
+  width: 35%;
+  margin-left: 24px;padding-right: 1rem;
 }
 
 .on-campus-details .oncampusdetail {
   display: flex;
   border: 1px solid orange;
-  padding: 1rem;padding-right: 0;
+  padding: 1rem;padding-right: 1rem;
 }
 
 /* Remove the padding at top of first item only */
 #orientation {
   padding-top: 0;
+  margin-top: 2rem;
 }
 
 .oncampusdetail img {
@@ -242,7 +255,8 @@ header .mobile {
 }
 
 .on-campus-text {
-  display:flex;flex-direction: column;
+  display:flex;
+  flex-direction: column;
   justify-content: center;
   width: 65%;border: 1px solid red;
   padding-left: 24px;
@@ -251,12 +265,12 @@ header .mobile {
 .on-campus-text h2{
   margin-bottom: 8px;
   line-height: 1.4;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: normal;
 }
 
 .on-campus-text span {
-  font-size: 1.6rem;
+  font-size: 1rem;
   margin-bottom: 8px;
   line-height: 1.4;
   font-weight: lighter;border: 1px solid red;
@@ -265,7 +279,7 @@ header .mobile {
 
 .on-campus-text a{
   color: #4ba3f4;
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-weight: lighter;
 }
 
