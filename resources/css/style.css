@@ -21,10 +21,6 @@ h2 {
   width:100%;
 
 }
-/*
-.center {
-  text-align: center;
-}*/
 
 /* Don't need this one anymore*/
 .button {
@@ -44,8 +40,7 @@ h2 {
 }
 
 
-/* Header */
-
+/* Header Section*/
 header {
   position: fixed;z-index:1;
   width: 100%;
@@ -96,7 +91,8 @@ header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 760px) {
+/*display icons at 720px screen width*/
+@media only screen and (max-width: 720px) {
   header .desktop {
     display: none;
   }
@@ -129,40 +125,39 @@ header .mobile {
   }
 }
 
-/* Start here section*/
 
+/* Start here section*/
 .start-here-section {
-  display: flex;border: 2px solid blue;
-  background-color: lightgrey;padding-top: 64px;
+  display: flex;
+  background-color: lightgrey;padding-top: 96px;padding-bottom: 32px;
 }
 
 .start-here-text {
     margin-left: 24px;
     width:35%;
-    border: 1px solid red;
 }
 
 .start-here-text h1 {
   color: #383838;
   font-size: 3rem;
-  font-weight: bold;border: 1px solid green;
-  width:80%;
+  font-weight: bold;
+  width:90%;
   margin-top: 10rem;
   margin-bottom: 2rem;
 }
 
 .start-here-text p {
-  margin-top: 2rem;border: 1px solid yellow;
+  margin-top: 2rem;
   font-size: 1.5rem;
   color: #383838;
   line-height: 1.4;
-  width: 80%;
+  width: 90%;
 }
 
 .startbutton {
   padding-top: 8px;
   padding-bottom: 8px;
-  width: 70%;
+  width: 90%;
   color: white;
   font-size: 1.4rem;
   background-color: #383838;
@@ -174,13 +169,12 @@ header .mobile {
 #startherelogo {
   width: 60%;height: 80%;
   margin-left: 24px;
-  /*max-width: 100%;height: auto;*/
-  /*margin: 32px 24px;*/border: 2px solid red;
 }
 
 @media only screen and (max-width: 760px) {
   .start-here-section {
     display:block;
+    padding-top: 64px;
   }
 
   #startherelogo {
@@ -188,18 +182,33 @@ header .mobile {
   }
 
   .start-here-text {
-      margin-left: 24px;margin-right: 24px;
+      margin-left: 24px;
+      margin-right: 24px;
       margin-bottom: 32px;
-      width:100%;border: 2px solid red;
+      width:100%;
   }
 
 }
+
+/*Move header text higher up the page*/
+@media only screen and (max-width: 1065px) {
+  .start-here-text h1 {
+    margin-top: 5rem;
+  }
+}
+/*Move header text higher up the page*/
+@media only screen and (max-width: 970px) {
+  .start-here-text h1 {
+    margin-top: 3rem;
+  }
+}
+
 
 /* mobile layout for the Start here section*/
 @media only screen and (max-width: 420px) {
   .start-here-text {
     margin: 0;width:92%;margin-left: 1rem;
-    padding-bottom: 2rem;
+    /*padding-bottom: 2rem;*/
   }
   .start-here-text h1, p, .startbutton{
     width: 100%;
@@ -216,20 +225,21 @@ header .mobile {
   .start-here-text .startbutton{
     margin-top: 24px;
   }
+  .start-here-section{
+    padding-top: 64px;
+  }
 }
+
 
 /* Information section*/
 .on-campus {
   display: flex;
   margin-top: 2rem;margin-bottom: 2rem;
-  /*padding-bottom: 2rem;*/border: 4px solid red;
 }
 
 .on-campus .quote{
-  border:1px solid green;
   width: 60%;margin-top: 0;padding-bottom: 0;
   margin-left: 24px;
-  /*padding-right: 24px;*/
 }
 
 .on-campus .quote img{
@@ -240,31 +250,28 @@ header .mobile {
 .quote h1 {
   font-size: 2.5rem;
   margin-top: 32px;
-  margin-bottom: 24px;border: 1px solid orange;
+  margin-bottom: 24px;
 }
 
 .quote p{
-  line-height: 1.4;/*margin-bottom: 24px;*/
+  line-height: 1.4;
   font-size: 1rem;
   width:80%;color: grey;
   font-weight: lighter;
-  margin-bottom: 24px;border: 1px solid orange;
+  margin-bottom: 24px;
 }
 
 .author {
-    border: 1px solid pink;
     font-size: 1rem;
 }
 
 .on-campus-details {
-  border: 2px solid blue;
   width: 35%;
   margin-left: 24px;padding-right: 1rem;
 }
 
 .on-campus-details .oncampusdetail {
   display: flex;
-  border: 2px solid orange;
   padding: 1rem;padding-right: 1rem;
 }
 
@@ -276,6 +283,7 @@ header .mobile {
 
 .oncampusdetail img {
   width: 35%; height:34%;
+  min-width: 160px;
 }
 .info-mobile {
   display: none;
@@ -284,7 +292,7 @@ header .mobile {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  width: 85%;border: 1px solid red;
+  width: 85%;
   padding-left: 24px;
 }
 
@@ -299,7 +307,7 @@ header .mobile {
   font-size: 1rem;
   margin-bottom: 8px;
   line-height: 1.4;
-  font-weight: lighter;border: 1px solid blue;
+  font-weight: lighter;
   width: 100%;
 }
 
@@ -311,6 +319,28 @@ header .mobile {
 
 #guest-lecturer {
   background-color: lightgrey;
+}
+
+@media only screen and (max-width: 900px) {
+  .oncampusdetail img {
+    display: none;
+    width:100%;
+  }
+
+  .on-campus {
+    margin: 0px;padding: 0px;
+    margin-top: 1rem;margin-bottom: 2rem;
+  }
+
+  .on-campus-details .oncampusdetail {
+    display: flex;
+    flex-direction: column;
+    margin: 0px; padding: 0px;
+  }
+
+  .oncampusdetail .info-mobile {
+    display: flex;
+  }
 }
 
 /* mobile layout for the Information section*/
@@ -347,7 +377,7 @@ header .mobile {
   .on-campus-details{
     width: 100%;
     padding: 0px;
-    margin: 0px;border: 1px solid turquoise;
+    margin: 0px;
   }
 
   .on-campus-text {
@@ -360,21 +390,9 @@ header .mobile {
 }
 
 
-/* Start Learning*/
-
-@media only screen and (max-width: 760px) {
-
-/* Start Learning*/
-
-
-}
-
-@media only screen and (max-width: 450px) {
-/* Start Learning*/
-}
+/* Start Learning section*/
 
 #start-learning-section {
-
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -394,7 +412,7 @@ header .mobile {
   align-items:baseline;
   flex-wrap: wrap;
   flex-direction: row;
-  width:100%;border: 1px solid blue;
+  width:100%;
   margin-left: 3.5rem;
   margin-right: 3.5rem;padding-top: 1rem;
 }
@@ -408,7 +426,7 @@ header .mobile {
   display: flex;
   /*flex: 1;*/
   justify-content: flex-start;flex-direction: column;
-  background-color: white;border: 1px solid green;
+  background-color: white;
   width:30%;height: auto;
   margin: 1rem;padding-bottom: 2rem;
 
@@ -417,22 +435,26 @@ header .mobile {
 .course .image-container {
   /*width: 100%;*/
   /*height: 65%;*/
-  border: 1px solid blue;
+
 }
 
 .course .image-container img{
   width:100%;
 }
 
+.course .content {
+    padding-left: 1rem;
+}
+
 .course .content h1 {
-  margin-left: 1rem;
+  /*margin-left: 1rem;*/
   margin-top: 1rem;
   font-weight:500;
   font-size: 1.4rem;
 }
 
 .course .content h2 {
-  margin-left: 1rem;
+  /*margin-left: 1rem;*/
   padding-bottom: 0.5rem;padding-top: 0.5rem;
   font-size: 1rem;
   font-weight:lighter;
@@ -440,14 +462,14 @@ header .mobile {
 }
 
 .course .content p {
-  margin-left: 1rem;
+  /*margin-left: 1rem;*/
   font-size: 1rem;
   line-height: 1.2;
   height: 5rem;
   font-weight:lighter;
   color: #4a4a4a;
   /*margin-bottom: 24px;*/
-  word-wrap: normal;border: 1px solid blue;
+  word-wrap: normal;
 }
 
 @media only screen and (max-width: 890px) {
@@ -463,20 +485,26 @@ header .mobile {
   }
 }
 
+
+
+
 @media only screen and (max-width: 760px) {
   #start-learning-section {
     flex-flow: column;
-    padding: 0;
+    /*padding: 0;*/
   }
 
   .course {
-    margin: 0;
-    padding: 1.25rem 1rem 0 1rem;
+    margin: 0.5rem;
+    /*padding: 1.25rem 1rem 0 1rem;*/
+  }
+  .course .content p {
+    height:5.5rem;width:100%;
   }
 }
 
 /*mobile screen layout*/
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 600px){
 
   .courses {
     display: none; /*Hide desktop layout*/
@@ -496,7 +524,11 @@ header .mobile {
     padding-top: 32px;
   }
 
-  .courses-mobile span{
+  .courses-mobile a:hover{
+    background-color: lightgrey;
+  }
+
+  .courses-mobile a{
     font-size: 1.4rem;
     background-color: grey;
     margin-bottom: 8px;
@@ -506,8 +538,9 @@ header .mobile {
     padding-bottom: 24px;
     padding-left: 16px;
   }
-
 }
+
+
 /* Thesis section*/
 .thesis-section {
   display: flex;
@@ -597,6 +630,18 @@ header .mobile {
 #fisma {
   background-color: lightgrey;
 }
+
+/* Adding in a media query to display the thesis section better at 760px as text becomes too compressed*/
+@media only screen and (max-width: 760px) {
+  .thesis-section-addons{
+    display: none;
+  }
+
+  .quote2 {
+    width:100%;
+  }
+}
+
 /*mobile layout: remove all artifacts except for title and video*/
 @media only screen and (max-width: 420px) {
   .thesis-section-addons, .quote2txt {
